@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const urlController = require("../controllers/urlshortener.controller");
 
-router.post("/encode", async (req, res) => {
-  res.sendStatus(200);
-});
+router.post("/encode", urlController.encode);
 module.exports = router;
