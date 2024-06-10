@@ -10,4 +10,7 @@ const encode = (req, res) => {
   console.log("Short Url Produced");
   res.json({ shortUrl });
 };
-module.exports = { encode };
+const decode = (req, res) => {
+  res.json({ message: "Hello" });
+};
+module.exports = { encode, decode };
