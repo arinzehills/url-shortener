@@ -15,4 +15,9 @@ const decode = (req, res) => {
   const longUrl = urlService.decodeService(shortUrl);
   res.json({ longUrl });
 };
-module.exports = { encode, decode };
+const getStatistic = (req, res) => {
+  const { urlPath } = req.params;
+  const stats = urlService.getStatisticService(urlPath);
+  res.json(stats);
+};
+module.exports = { encode, decode, getStatistic };

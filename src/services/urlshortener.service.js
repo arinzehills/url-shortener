@@ -16,4 +16,11 @@ const decodeService = (shortUrl) => {
   }
   return null;
 };
-module.exports = { encodeService, decodeService };
+const getStatisticService = (urlPath) => {
+  const urlData = urls.get(urlPath); //get the map
+  if (urlData) {
+    return { longUrl: urlData.longUrl, visits: urlData.visits };
+  }
+  return null;
+};
+module.exports = { encodeService, decodeService, getStatisticService };
