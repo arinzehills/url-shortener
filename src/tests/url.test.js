@@ -9,4 +9,10 @@ describe("URL Shortener API", () => {
     expect(res.statusCode).toEqual(200);
     expect(res.body).toHaveProperty("shortUrl");
   });
+  it("should decode a URL", async () => {
+    const resDecode = await request(app)
+      .post("/api/decode")
+      .send({ shortUrl: "http://short.est/gqcbv6" });
+    expect(resDecode.statusCode).toEqual(200);
+  });
 });

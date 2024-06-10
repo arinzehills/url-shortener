@@ -6,8 +6,8 @@ const encode = (req, res) => {
     return res.status(400).json({ message: "Url is required" });
   }
   console.log(longUrl);
-  const shortUrls = urlService.encode(longUrl);
+  const shortUrl = urlService.encode(longUrl);
   console.log("Short Url Produced");
-  res.json({ shortUrls });
+  res.json({ shortUrl });
 };
 module.exports = { encode };
