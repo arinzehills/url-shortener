@@ -7,6 +7,6 @@ describe("URL Shortener API", () => {
       .post("/api/encode")
       .send({ longUrl: "https://indicina.co" });
     expect(res.statusCode).toEqual(200);
-    // expect(res.body).toHaveProperty("shortUrl");
+    expect(res.body).toHaveProperty("shortUrl");
   });
 });
