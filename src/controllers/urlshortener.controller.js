@@ -11,6 +11,8 @@ const encode = (req, res) => {
   res.json({ shortUrl });
 };
 const decode = (req, res) => {
-  res.json({ message: "Hello" });
+  const { shortUrl } = req.body;
+  const longUrl = urlService.decode(shortUrl);
+  res.json({ longUrl });
 };
 module.exports = { encode, decode };
