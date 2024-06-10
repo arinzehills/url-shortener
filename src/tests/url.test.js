@@ -21,4 +21,11 @@ describe("URL Shortener API", () => {
     expect(resDecode.statusCode).toEqual(200);
     expect(resDecode.body.longUrl).toEqual("https://indicina.co");
   });
+  it("should return statistics for a URL", async () => {
+    const urlPath = "http://short.est/gqcbv6".split("/").pop();
+
+    const resStats = await request(app).get(`/api/statistic/${urlPath}`);
+
+    expect(resStats.statusCode).toEqual(200);
+  });
 });
