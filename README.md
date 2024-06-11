@@ -1,5 +1,3 @@
-# url-shortener
-
 # URL Shortener Service
 
 ## How to Run
