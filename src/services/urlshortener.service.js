@@ -19,6 +19,7 @@ const decodeService = (shortUrl) => {
 const getStatisticService = (urlPath) => {
   const urlData = urls.get(urlPath); //get the map
   if (urlData) {
+    console.log({ longUrl: urlData.longUrl, visits: urlData.visits });
     return { longUrl: urlData.longUrl, visits: urlData.visits };
   }
   return null;
