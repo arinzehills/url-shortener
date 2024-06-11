@@ -34,7 +34,7 @@
 - `POST /api/decode`: Decodes a shortened URL to its original URL.
 - `GET /api/statistic/:urlPath`: Returns basic stats of a short URL path.
 
-### Addiotinals
+### Post man Docs
 
 You can import the Postman collection to easily test the API endpoints. click the link below to do that
 [Postman collection docs](https://documenter.getpostman.com/view/16821985/2sA3XMjP7r)
